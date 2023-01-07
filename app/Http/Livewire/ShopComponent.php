@@ -54,6 +54,7 @@ class ShopComponent extends Component
             
         }
     }
+    
     public function render()
     {
         if($this->orderBy=='Price: Low to High')
