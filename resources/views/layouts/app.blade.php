@@ -685,6 +685,7 @@
     <script src="{{ asset('assets/js/shop.js?v=3.3') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
     @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>
