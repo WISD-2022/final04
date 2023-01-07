@@ -23,7 +23,7 @@
                     <div class="col-lg-9">
                         <div class="shop-product-fillter">
                             <div class="totall-product">
-                                <p> We found <strong class="text-brand">{{$products->total()}}</strong> items for you!</p>
+                                <p> We found <strong class="text-brand">{{$products->total()}}</strong> items for you form <strong class="text-brand">{{$category_name}}</strong>Category!</p>
                             </div>
                             <div class="sort-by-product-area">
                                 <div class="sort-by-cover mr-10">
@@ -126,7 +126,7 @@
                         <div class="row">
                             <div class="col-lg-12 col-mg-6"></div>
                             <div class="col-lg-12 col-mg-6"></div>
-                        </div> 
+                        </div>
                         <div class="widget-category mb-30">
                             <h5 class="section-title style-1 mb-30 wow fadeIn animated">Category</h5>
                             <ul class="categories">
