@@ -7,6 +7,7 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminCategoriesComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
 // 管理員介面
 Route::middleware(['auth', 'authadmin'])->group(function () {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/categories', AdminCategoriesComponent::class)->name('admin.categories');
 });
 
 Route::middleware(['auth'])->group(function () {

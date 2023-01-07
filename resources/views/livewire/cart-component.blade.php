@@ -3,7 +3,7 @@
         <div class="page-header breadcrumb-wrap">
             <div class="container">
                 <div class="breadcrumb">
-                    <a href="index.html" rel="nofollow">Home</a>
+                    <a href="/" rel="nofollow">首頁</a>
                     <span></span> Shop
                     <span></span> Your Cart
                 </div>
