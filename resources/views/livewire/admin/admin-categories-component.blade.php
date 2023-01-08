@@ -31,7 +31,6 @@
                                         <tr>
                                             <th>#</th>
                                             <th>類別名稱</th>
-                                            <th>Slug</th>
                                             <th>Action</th>
                                         </tr>
                                         <tbody>
@@ -39,15 +38,14 @@
                                                 <tr>
                                                     <td>{{ $category->id }}</td>
                                                     <td>{{ $category->name }}</td>
-                                                    <td>{{ $category->slug }}</td>
                                                     <td></td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
                                     </thead>
                                 </table>
-                                <div class="text-center">
-                                    {{ $categories->links() }}
+                                <div>
+                                    {{ $categories->links('vendor.pagination.bootstrap-4') }}
                                 </div>
                                 
                             </div>
