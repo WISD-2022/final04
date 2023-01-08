@@ -45,7 +45,9 @@
                                                 <tr>
                                                     <td>{{ $category->id }}</td>
                                                     <td>{{ $category->name }}</td>
-                                                    <td></td>
+                                                    <td>
+                                                        <a href="{{ route('admin.category.edit', ['category_id'=>$category->id])}}" class="text_info">修改</a>
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
