@@ -23,9 +23,16 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                所有類別
+                                <div class="row">
+                                    <div class="col-md-6" style="display: flex;align-items: center;">
+                                        所有類別
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="{{ route('admin.category.add') }}" class="btn btn-success float-end">新增產品類別</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-boy">
+                            <div class="card-body">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
