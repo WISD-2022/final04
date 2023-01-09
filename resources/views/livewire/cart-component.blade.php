@@ -27,7 +27,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="image product-thumbnail"><img src="{{ asset('assets/imgs/shop/product-1-2.jpg') }}" alt="#"></td>
+                                        <td class="image product-thumbnail"><img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="#"></td>
                                         <td class="product-des product-name">
                                             <h5 class="product-name"><a href="product-details.html">J.Crew Mercantile Women's Short-Sleeve</a></h5>
                                             <p class="font-xs">Maboriosam in a tonto nesciung eget<br> distingy magndapibus.
