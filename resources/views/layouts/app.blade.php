@@ -14,6 +14,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/theme/favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     @livewireStyles
 </head>
 
@@ -32,7 +33,7 @@
                                         <li><a href="#"><img src="{{ asset('assets/imgs/theme/flag-dt.png') }}" alt="">Deutsch</a></li>
                                         <li><a href="#"><img src="{{ asset('assets/imgs/theme/flag-ru.png') }}" alt="">Pусский</a></li>
                                     </ul>
-                                </li>                                
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -50,16 +51,16 @@
                     <div class="col-xl-3 col-lg-4">
                         <div class="header-info header-info-right">
                             @auth
-                                <ul>                                
-                                    <li><i class="fi-rs-user"></i> {{Auth::user()->name }}  / 
+                                <ul>
+                                    <li><i class="fi-rs-user"></i> {{Auth::user()->name }}  /
                                         <form method="POST" action="{{route('logout')}}">
                                             @csrf
                                             <a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">登出</a>
                                         </form>
                                     </li>
-                                </ul>   
+                                </ul>
                             @else
-                                <ul>                                
+                                <ul>
                                     <li><i class="fi-rs-key"></i><a href="{{ route('login') }}">登入</a>  / <a href="{{ route('register') }}">註冊</a></li>
                                 </ul>
                             @endif
@@ -74,12 +75,8 @@
                     <div class="logo logo-width-1">
                         <a href="index.html"><img src="{{ asset('assets/imgs/logo/logo.png') }}" alt="logo"></a>
                     </div>
-                    <div class="header-right">
-                        <div class="search-style-1">
-                            <form action="#">                                
-                                <input type="text" placeholder="Search for items...">
-                            </form>
-                        </div>
+                    <div class="header-right">  
+                        @livewire('header-search-component')                 
                         <div class="header-action-right">
                             <div class="header-action-2">
                                 <div class="header-action-icon-2">
@@ -131,6 +128,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                @livewire('wishlist-icon-component')
+                                @livewire('cart-icon-component')
                             </div>
                         </div>
                     </div>
@@ -388,7 +387,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Blog </a></li>                                    
+                                    <li><a href="blog.html">Blog </a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     @auth
                                         <li><a href="#">我的帳戶<i class="fi-rs-angle-down"></i></a>
@@ -399,11 +398,11 @@
                                                     <li><a href="{{route('admin.categories')}}">類別</a></li>
                                                     <li><a href="#">優惠券</a></li>
                                                     <li><a href="#">訂單</a></li>
-                                                    <li><a href="#">顧客</a></li>                                     
+                                                    <li><a href="#">顧客</a></li>
                                                 </ul>
                                             @else
                                                 <ul class="sub-menu">
-                                                    <li><a href="{{route('user.dashboard')}}">介面</a></li>                                      
+                                                    <li><a href="{{route('user.dashboard')}}">介面</a></li>
                                                 </ul>
                                             @endif
                                         </li>
@@ -570,9 +569,9 @@
                         <a href="contact.html"> Our location </a>
                     </div>
                     <div class="single-mobile-header-info">
-                        <a href="login.html">Log In </a>                        
+                        <a href="login.html">Log In </a>
                     </div>
-                    <div class="single-mobile-header-info">                        
+                    <div class="single-mobile-header-info">
                         <a href="register.html">Sign Up</a>
                     </div>
                     <div class="single-mobile-header-info">
@@ -589,8 +588,8 @@
                 </div>
             </div>
         </div>
-    </div>        
-    
+    </div>
+
     {{ $slot }}
 
     <footer class="main">
@@ -654,7 +653,7 @@
                             <li><a href="#">Delivery Information</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Contact Us</a></li>                            
+                            <li><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2  col-md-3">
@@ -663,7 +662,7 @@
                             <li><a href="my-account.html">My Account</a></li>
                             <li><a href="#">View Cart</a></li>
                             <li><a href="#">My Wishlist</a></li>
-                            <li><a href="#">Track My Order</a></li>                            
+                            <li><a href="#">Track My Order</a></li>
                             <li><a href="#">Order</a></li>
                         </ul>
                     </div>
@@ -703,7 +702,7 @@
                 </div>
             </div>
         </div>
-    </footer>    
+    </footer>
     <!-- Vendor JS-->
     <script src="{{ asset('assets/js/vendor/modernizr-3.6.0.min.js') }}"></script>
     <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
@@ -728,7 +727,9 @@
     <!-- Template  JS -->
     <script src="{{ asset('assets/js/main.js?v=3.3') }}"></script>
     <script src="{{ asset('assets/js/shop.js?v=3.3') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
     @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>
