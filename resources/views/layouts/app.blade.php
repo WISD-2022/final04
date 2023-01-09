@@ -395,7 +395,7 @@
                                             @if(Auth::user()->utype == 'ADM')
                                                 <ul class="sub-menu">
                                                     <li><a href="{{route('admin.dashboard')}}">介面</a></li>
-                                                    <li><a href="#">產品</a></li>
+                                                    <li><a href="{{route('admin.products')}}">產品</a></li>
                                                     <li><a href="{{route('admin.categories')}}">類別</a></li>
                                                     <li><a href="#">優惠券</a></li>
                                                     <li><a href="#">訂單</a></li>
