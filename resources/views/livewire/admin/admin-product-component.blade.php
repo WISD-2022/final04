@@ -61,7 +61,7 @@
                                                     <td>{{ ++$i }}</td>
                                                     <td><img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="{{ $product->name }}" width="60"></td>
                                                     <td>{{ $product->name }}</td>
-                                                    <td>{{ $product->stock_status }}</td>
+                                                    <td>{{ $product->stock_status == 'instock' ? '有存貨':'無存貨'}}</td>
                                                     <td>{{ $product->regular_price }}</td>
                                                     <td>{{ $product->category->name }}</td>
                                                     <td>{{ $product->created_at }}</td>

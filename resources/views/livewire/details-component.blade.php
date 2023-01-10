@@ -21,36 +21,16 @@
                                         <!-- MAIN SLIDES -->
                                         <div class="product-image-slider">
                                             <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="product image">
+                                                <img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="product image">
                                             </figure>
                                             <figure class="border-radius-10">
                                                 <img src="{{asset('assets/imgs/shop/product-16-1.jpg')}}" alt="product image">
                                             </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-3.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-4.jpg)')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-5.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-6.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-16-7.jpg')}}" alt="product image">
-                                            </figure>
                                         </div>
                                         <!-- THUMBNAILS -->
                                         <div class="slider-nav-thumbnails pl-15 pr-15">
-                                            <div><img src="{{asset('assets/imgs/shop/thumbnail-3.jpg')}}" alt="product image"></div>
+                                            <div><img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="product image"></div>
                                             <div><img src="{{asset('assets/imgs/shop/thumbnail-4.jpg')}}" alt="product image"></div>
-                                            <div><img src="{{asset('assets/imgs/shop/thumbnail-5.jpg')}}" alt="product image"></div>
-                                            <div><img src="{{asset('assets/imgs/shop/thumbnail-6.jpg')}}" alt="product image"></div>
-                                            <div><img src="{{asset('assets/imgs/shop/thumbnail-7.jpg')}}" alt="product image"></div>
-                                            <div><img src="{{asset('assets/imgs/shop/thumbnail-8.jpg')}}" alt="product image"></div>
-                                            <div><img src="{{asset('assets/imgs/shop/thumbnail-9.jpg')}}" alt="product image"></div>
                                         </div>
                                     </div>
                                     <!-- End Gallery -->
@@ -82,21 +62,12 @@
                                         <div class="clearfix product-price-cover">
                                             <div class="product-price primary-color float-left">
                                                 <ins><span class="text-brand">${{$product->regular_price}}</span></ins>
-{{--                                                <ins><span class="old-price font-md ml-15">$200.00</span></ins>--}}
-{{--                                                <span class="save-price  font-md color3 ml-15">25% Off</span>--}}
                                             </div>
                                         </div>
                                         <div class="bt-1 border-color-1 mt-15 mb-15"></div>
                                         <div class="short-desc mb-30">
                                             <p>{{$product->short_description}}</p>
                                         </div>
-{{--                                        <div class="product_sort_info font-xs mb-30">--}}
-{{--                                            <ul>--}}
-{{--                                                <li class="mb-10"><i class="fi-rs-crown mr-5"></i> 1 Year AL Jazeera Brand Warranty</li>--}}
-{{--                                                <li class="mb-10"><i class="fi-rs-refresh mr-5"></i> 30 Day Return Policy</li>--}}
-{{--                                                <li><i class="fi-rs-credit-card mr-5"></i> Cash on Delivery available</li>--}}
-{{--                                            </ul>--}}
-{{--                                        </div>--}}
                                         <div class="attr-detail attr-color mb-15">
                                             <strong class="mr-10">Color</strong>
                                             <ul class="list-filter color-filter">
@@ -133,7 +104,6 @@
                                             </div>
                                         </div>
                                         <ul class="product-meta font-xs color-grey mt-50">
-                                            <li class="mb-5">SKU: <a href="#">FWM15VKT</a></li>
                                             <li class="mb-5">Tags: <a href="#" rel="tag">Cloth</a>, <a href="#" rel="tag">Women</a>, <a href="#" rel="tag">Dress</a> </li>
                                             <li>Availability:<span class="in-stock text-success ml-5">8 Items In Stock</span></li>
                                         </ul>
@@ -157,31 +127,7 @@
                                     <div class="tab-pane fade show active" id="Description">
                                         <div class="">
                                             {{$product->description}}
-{{--                                            <p>Uninhibited carnally hired played in whimpered dear gorilla koala depending and much yikes off far quetzal goodness and from for grimaced goodness unaccountably and meadowlark near unblushingly crucial scallop--}}
-{{--                                                tightly neurotic hungrily some and dear furiously this apart.</p>--}}
-{{--                                            <p>Spluttered narrowly yikes left moth in yikes bowed this that grizzly much hello on spoon-fed that alas rethought much decently richly and wow against the frequent fluidly at formidable acceptably flapped--}}
-{{--                                                besides and much circa far over the bucolically hey precarious goldfinch mastodon goodness gnashed a jellyfish and one however because.--}}
-{{--                                            </p>--}}
-{{--                                            <ul class="product-more-infor mt-30">--}}
-{{--                                                <li><span>Type Of Packing</span> Bottle</li>--}}
-{{--                                                <li><span>Color</span> Green, Pink, Powder Blue, Purple</li>--}}
-{{--                                                <li><span>Quantity Per Case</span> 100ml</li>--}}
-{{--                                                <li><span>Ethyl Alcohol</span> 70%</li>--}}
-{{--                                                <li><span>Piece In One</span> Carton</li>--}}
-{{--                                            </ul>--}}
-{{--                                            <hr class="wp-block-separator is-style-dots">--}}
-{{--                                            <p>Laconic overheard dear woodchuck wow this outrageously taut beaver hey hello far meadowlark imitatively egregiously hugged that yikes minimally unanimous pouted flirtatiously as beaver beheld above forward--}}
-{{--                                                energetic across this jeepers beneficently cockily less a the raucously that magic upheld far so the this where crud then below after jeez enchanting drunkenly more much wow callously irrespective limpet.</p>--}}
-{{--                                            <h4 class="mt-30">Packaging & Delivery</h4>--}}
-{{--                                            <hr class="wp-block-separator is-style-wide">--}}
-{{--                                            <p>Less lion goodness that euphemistically robin expeditiously bluebird smugly scratched far while thus cackled sheepishly rigid after due one assenting regarding censorious while occasional or this more crane--}}
-{{--                                                went more as this less much amid overhung anathematic because much held one exuberantly sheep goodness so where rat wry well concomitantly.--}}
-{{--                                            </p>--}}
-{{--                                            <p>Scallop or far crud plain remarkably far by thus far iguana lewd precociously and and less rattlesnake contrary caustic wow this near alas and next and pled the yikes articulate about as less cackled dalmatian--}}
-{{--                                                in much less well jeering for the thanks blindly sentimental whimpered less across objectively fanciful grimaced wildly some wow and rose jeepers outgrew lugubrious luridly irrationally attractively--}}
-{{--                                                dachshund.--}}
-{{--                                            </p>--}}
-                                        </div>
+                                    </div>
                                     </div>
                                     <div class="tab-pane fade" id="Additional-info">
                                         <table class="font-md">
@@ -283,7 +229,7 @@
                                                         <div class="single-comment justify-content-between d-flex">
                                                             <div class="user justify-content-between d-flex">
                                                                 <div class="thumb text-center">
-                                                                    <img src="{{asset('"assets/imgs/page/avatar-6.jpg')}}" alt="product image">
+                                                                    <img src="{{asset('assets/imgs/page/avatar-6.jpg')}}" alt="product image">
                                                                     <h6><a href="#">Jacky Chan</a></h6>
                                                                     <p class="font-xxs">Since 2012</p>
                                                                 </div>
@@ -437,7 +383,7 @@
                                                 <div class="product-img-action-wrap">
                                                     <div class="product-img product-img-zoom">
                                                         <a href="{{route('product.details',['slug'=>$rproduct->slug])}}" tabindex="0">
-                                                            <img class="default-img" src="{{asset('assets/imgs/shop/product-')}}{{$rproduct->id}}-1.jpg" alt="{{$rproduct->name}}">
+                                                            <img class="default-img" src="{{asset('assets/imgs/products')}}/{{$rproduct->image}}" alt="{{$rproduct->name}}">
                                                             <img class="hover-img" src="{{asset('assets/imgs/shop/product-2-2.jpg')}}" alt="">
                                                         </a>
                                                     </div>
