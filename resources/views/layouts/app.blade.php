@@ -344,16 +344,16 @@
                                         <li><a href="#">我的帳戶<i class="fi-rs-angle-down"></i></a>
                                             @if(Auth::user()->utype == 'ADM')
                                                 <ul class="sub-menu">
-                                                    <li><a href="{{route('admin.dashboard')}}">介面</a></li>
-                                                    <li><a href="{{route('admin.products')}}">產品</a></li>
-                                                    <li><a href="{{route('admin.categories')}}">類別</a></li>
-                                                    <li><a href="#">優惠券</a></li>
+                                                    <li><a href="{{route('admin.dashboard')}}">使用者介面</a></li>
+                                                    <li><a href="{{route('admin.products')}}">產品管理</a></li>
+                                                    <li><a href="{{route('admin.categories')}}">產品類別</a></li>
+                                                    <li><a href="{{route('admin.home.slider')}}">首頁Banner</a></li>
                                                     <li><a href="#">訂單</a></li>
                                                     <li><a href="#">顧客</a></li>
                                                 </ul>
                                             @else
                                                 <ul class="sub-menu">
-                                                    <li><a href="{{route('user.dashboard')}}">介面</a></li>
+                                                    <li><a href="{{route('user.dashboard')}}">使用者介面</a></li>
                                                 </ul>
                                             @endif
                                         </li>
