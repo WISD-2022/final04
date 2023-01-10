@@ -78,8 +78,8 @@
                                     </div>
 
                                     <div class="mb-3 mt-3">
-                                        <label for="regular_price" class="form-lable">產品成本</label>
-                                        <input type="text" name="regular_price" class="form-control" placeholder="輸入產品成本" wire:model="regular_price" />
+                                        <label for="regular_price" class="form-lable">產品售價</label>
+                                        <input type="text" name="regular_price" class="form-control" placeholder="輸入產品售價" wire:model="regular_price" />
                                         @error('regular_price')
                                             <p class="text-danger">
                                                 {{$message}}
@@ -88,8 +88,8 @@
                                     </div>
 
                                     <div class="mb-3 mt-3">
-                                        <label for="sale_price" class="form-lable">產品售價</label>
-                                        <input type="text" name="sale_price" class="form-control" placeholder="輸入產品售價" wire:model="sale_price"/>
+                                        <label for="sale_price" class="form-lable">產品成本</label>
+                                        <input type="text" name="sale_price" class="form-control" placeholder="輸入產品成本" wire:model="sale_price"/>
                                         @error('sale_price')
                                             <p class="text-danger">
                                                 {{$message}}
@@ -98,7 +98,7 @@
                                     </div>
 
                                     <div class="mb-3 mt-3">
-                                        <label for="sale_price" class="form-lable">庫存狀態</label>
+                                        <label for="sale_price" class="form-lable" wire:model="stock_status">庫存狀態</label>
                                         <select class="form-control">
                                             <option value="instock">有存貨</option>
                                             <option value="outofstock">沒有存貨</option>
@@ -111,8 +111,8 @@
                                     </div>
 
                                     <div class="mb-3 mt-3">
-                                        <label for="featured" class="form-lable" wire:model="featured">精選</label>
-                                        <select class="form-control" wire:model="featured">
+                                        <label for="featured" class="form-lable">精選</label>
+                                        <select class="form-control" name="featured" wire:model="featured">
                                             <option value="0">N</option>
                                             <option value="1">Y</option>
                                         </select>
