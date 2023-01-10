@@ -35,7 +35,7 @@
                                 
                                 @foreach(Cart::instance('cart')->content() as $item)
                                     <tr>
-                                        <td class="image product-thumbnail"><img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="#"></td>
+                                        <td class="image product-thumbnail"><img src="{{ asset('assets/imgs/shop/product-')}}{{$item->id}}-1.jpg" alt="#"></td>
                                         <td class="product-des product-name">
                                             <h5 class="product-name"><a href="product-details.html">{{$item->model->name}}</a></h5>
                                             {{-- <p class="font-xs">Maboriosam in a tonto nesciung eget<br> distingy magndapibus.--}}
@@ -67,8 +67,8 @@
                             @endif
                         </div>
                         <div class="cart-action text-end">
-                            <a class="btn  mr-10 mb-sm-15"><i class="fi-rs-shuffle mr-10"></i>Update Cart</a>
-                            <a class="btn "><i class="fi-rs-shopping-bag mr-10"></i>Continue Shopping</a>
+                            <a class="btn  mr-10 mb-sm-15" href="#"><i class="fi-rs-shuffle mr-10"></i>Update Cart</a>
+                            <a class="btn " href="{{route('shop')}}"><i class="fi-rs-shopping-bag mr-10"></i>Continue Shopping</a>
                         </div>
                         <div class="divider center_icon mt-50 mb-50"><i class="fi-rs-fingerprint"></i></div>
                         <div class="row mb-50">

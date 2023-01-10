@@ -4,10 +4,12 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use Illuminate\Support\Str;
+use App\Models\Category;
 
 class AdminAddCategoryComponent extends Component
 {
     public $name;
+    public $slug;
 
     public function genrateSlug(){
         $this->slug = Str::slug($this->name);
@@ -16,15 +18,18 @@ class AdminAddCategoryComponent extends Component
     public function updated($fields){
         $this->validateOnly($fields, [
             'name' => 'required',
+            'slug' => 'required',
         ]);
     }
 
     public function storeCategory(){
         $this->validate([
             'name' => 'required',
+            'slug' => 'required',
         ]);
         $category = new Category();
         $category->name = $this->name;
+        $category->slug = $this->slug;
         $category->save();
         session()->flash('message', '新增成功');
     }

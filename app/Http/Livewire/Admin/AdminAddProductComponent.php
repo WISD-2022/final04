@@ -13,6 +13,7 @@ class AdminAddProductComponent extends Component
 {
     use WithFileUploads;
     public $name;
+    public $slug;
     public $short_description;
     public $description;
     public $regular_price;
@@ -26,6 +27,7 @@ class AdminAddProductComponent extends Component
     public function addProduct(){
         $this->validate([
             'name' => 'required',
+            'slug' => 'required',
             'short_description' => 'required',
             'description' => 'required',
             'regular_price' => 'required',
@@ -38,6 +40,7 @@ class AdminAddProductComponent extends Component
         ]);
         $product = new Product();
         $product->name = $this->name;
+        $product->slug = $this->slug;
         $product->short_description = $this->short_description;
         $product->description = $this->description;
         $product->regular_price = $this->regular_price;

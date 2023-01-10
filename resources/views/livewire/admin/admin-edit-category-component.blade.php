@@ -46,6 +46,15 @@
                                             </p>
                                         @enderror
                                     </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="name" class="form-lable">類別路由</label>
+                                        <input type="text" name="name" class="form-control" placeholder="輸入產品類別路由" wire:model="slug" />
+                                        @error('slug')
+                                            <p class="text-danger">
+                                                {{$message}}
+                                            </p>
+                                        @enderror
+                                    </div>
                                     <button type="submit" class="btn btn-primary float-end">修改</button>
                                 </form>                               
                             </div>

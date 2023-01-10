@@ -48,6 +48,16 @@
                                     </div>
 
                                     <div class="mb-3 mt-3">
+                                        <label for="slug" class="form-lable">產品路由</label>
+                                        <input type="text" name="slug" class="form-control" placeholder="輸入產品路由" wire:model="slug" />
+                                        @error('slug')
+                                            <p class="text-danger">
+                                                {{$message}}
+                                            </p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="mb-3 mt-3">
                                         <label for="short_description" class="form-lable">產品介紹</label>
                                         <textarea class="form-control" name="short_description" placeholder="輸入產品介紹" wire:model="short_description"></textarea>
                                         @error('short_description')
