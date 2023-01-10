@@ -3,8 +3,8 @@
         <div class="page-header breadcrumb-wrap">
             <div class="container">
                 <div class="breadcrumb">
-                    <a href="/" rel="nofollow">Home</a>                    
-                    <span></span> Login
+                    <a href="/" rel="nofollow">首頁</a>                    
+                    <span></span> 登入
                 </div>
             </div>
         </div>

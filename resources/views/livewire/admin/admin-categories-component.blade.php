@@ -44,8 +44,10 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
+                                            <th>圖片</th>
                                             <th>類別名稱</th>
                                             <th>類別路由</th>
+                                            <th>熱門</th>
                                             <th>動作</th>
                                         </tr>
                                         <tbody>
@@ -55,8 +57,10 @@
                                             @foreach($categories as $category)
                                                 <tr>
                                                     <td>{{ ++$i }}</td>
+                                                    <td><img src="{{asset('assets/imgs/categories')}}/{{$category->image}}"  width="60"></td>
                                                     <td>{{ $category->name }}</td>
                                                     <td>{{ $category->slug }}</td>
+                                                    <td>{{ $category->is_popular == 1 ? 'Yes':'No' }}</td>
                                                     <td>
                                                         <a href="{{ route('admin.category.edit', ['category_id'=>$category->id])}}" ><i class="fa fa-edit" style="font-size:24px; color:blue;"></i></a>
                                                         <a href="#" class="text_danger" wire:click.prevent="deleteCategory({{$category->id}})" style="margin-left:20px;"><i class="fa fa-trash" style="font-size:24px; color:red;"></i></a>

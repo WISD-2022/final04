@@ -55,6 +55,32 @@
                                             </p>
                                         @enderror
                                     </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="newimage" class="form-lable">圖片</label>
+                                        <input type="file" name="newimage" class="form-control" wire:model="newimage"/>
+                                        @if($newimage)
+                                            <img src="{{$newimage->temporaryUrl()}}" width=120>
+                                        @else
+                                            <img src="{{asset('assets/imgs/categories')}}/{{$image}}" width=120>
+                                        @endif
+                                        @error('newimage')
+                                            <p class="text-danger">
+                                                {{$message}}
+                                            </p>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="is_popular" class="form-lable">熱門</label>
+                                        <select name="is_popular" class="form-control" wire:model="is_popular">
+                                            <option value="0">N</option>
+                                            <option value="1">Y</option>
+                                        </select>
+                                        @error('is_popular')
+                                            <p class="text-danger">
+                                                {{$message}}
+                                            </p>
+                                        @enderror
+                                    </div>
                                     <button type="submit" class="btn btn-primary float-end">修改</button>
                                 </form>                               
                             </div>

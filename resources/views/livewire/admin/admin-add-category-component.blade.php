@@ -47,9 +47,33 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3 mt-3">
-                                        <label for="name" class="form-lable">類別路由(英文)</label>
-                                        <input type="text" name="name" class="form-control" placeholder="輸入產品類別路由(英文)" wire:model="slug"/>
+                                        <label for="slug" class="form-lable">類別路由(英文)</label>
+                                        <input type="text" name="slug" class="form-control" placeholder="輸入產品類別路由(英文)" wire:model="slug"/>
                                         @error('slug')
+                                            <p class="text-danger">
+                                                {{$message}}
+                                            </p>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="name" class="form-lable">圖片</label>
+                                        <input type="file" class="form-control" wire:model="image"/>
+                                        @if($image)
+                                            <img src="{{$image->temporaryUrl()}}" width=120>
+                                        @endif
+                                        @error('image')
+                                            <p class="text-danger">
+                                                {{$message}}
+                                            </p>
+                                        @enderror
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="is_popular" class="form-lable">熱門</label>
+                                        <select name="is_popular" class="form-control" wire:model="is_popular">
+                                            <option value="0">N</option>
+                                            <option value="1">Y</option>
+                                        </select>
+                                        @error('is_popular')
                                             <p class="text-danger">
                                                 {{$message}}
                                             </p>

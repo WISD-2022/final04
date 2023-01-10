@@ -15,6 +15,12 @@ class DetailsComponent extends Component
         $this->slug = $slug;
     }
 
+    public function addTowishlist($product_id,$product_name,$product_price)
+    {
+        Cart::instance('wishlist')->add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
+        $this->emitTo('wishlist-icon-component','refreshComponent');
+    }
+
     public function store($product_id,$product_name,$product_price)
     {
         Cart::instance('cart')->add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');

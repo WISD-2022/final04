@@ -14,13 +14,14 @@ class AdminCategoriesComponent extends Component
 
     public function deleteCategory($id){
         $category = Category::find($id);
+        unlink('assets/imgs/categories/'.$category->image);
         $category->delete();
         session()->flash('message', '刪除成功');
     }
 
     public function render()
     {
-        $categories = Category::orderBy('name', 'ASC')->paginate(5);
+        $categories = Category::orderBy('id', 'ASC')->paginate(5);
         return view('livewire.admin.admin-categories-component', ['categories'=>$categories]);
     }
 }
