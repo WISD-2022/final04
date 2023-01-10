@@ -48,8 +48,8 @@
                                     </div>
 
                                     <div class="mb-3 mt-3">
-                                        <label for="slug" class="form-lable">產品路由</label>
-                                        <input type="text" name="slug" class="form-control" placeholder="輸入產品路由" wire:model="slug" />
+                                        <label for="slug" class="form-lable">產品路由(英文)</label>
+                                        <input type="text" name="slug" class="form-control" placeholder="輸入產品路由(英文)" wire:model="slug" />
                                         @error('slug')
                                             <p class="text-danger">
                                                 {{$message}}

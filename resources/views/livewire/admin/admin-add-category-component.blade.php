@@ -47,7 +47,7 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3 mt-3">
-                                        <label for="name" class="form-lable">類別路由</label>
+                                        <label for="name" class="form-lable">類別路由(英文)</label>
                                         <input type="text" name="name" class="form-control" placeholder="輸入產品類別路由(英文)" wire:model="slug"/>
                                         @error('slug')
                                             <p class="text-danger">
