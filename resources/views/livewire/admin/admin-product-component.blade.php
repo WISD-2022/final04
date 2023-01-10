@@ -67,6 +67,7 @@
                                                     <td>{{ $product->created_at }}</td>
                                                     <td>
                                                         <a href="{{route('admin.product.edit', ['product_id'=>$product->id])}}"><i class="fa fa-edit" style="font-size:24px; color:blue;"></i></a>
+                                                        <a href="#" class="text_danger" wire:click.prevent="deleteCategory({{$product->id}})" style="margin-left:20px;"><i class="fa fa-trash" style="font-size:24px; color:red;"></i></a>
                                                     </td>
                                                 </tr>
                                             @endforeach
