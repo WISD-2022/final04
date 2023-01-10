@@ -19,8 +19,8 @@
         <div class="page-header breadcrumb-wrap">
             <div class="container">
                 <div class="breadcrumb">
-                    <a href="index.html" rel="nofollow">Home</a>
-                    <span></span> Shop
+                    <a href="index.html" rel="nofollow">首頁</a>
+                    <span></span> 商店
                 </div>
             </div>
         </div>
@@ -30,13 +30,13 @@
                     <div class="col-lg-9">
                         <div class="shop-product-fillter">
                             <div class="totall-product">
-                                <p> We found <strong class="text-brand">{{$products->total()}}</strong> items for you!</p>
+                                <p> 共 <strong class="text-brand">{{$products->total()}}</strong> 項商品!</p>
                             </div>
                             <div class="sort-by-product-area">
                                 <div class="sort-by-cover mr-10">
                                     <div class="sort-by-product-wrap">
                                         <div class="sort-by">
-                                            <span><i class="fi-rs-apps"></i>Show:</span>
+                                            <span><i class="fi-rs-apps"></i>顯示:</span>
                                         </div>
                                         <div class="sort-by-dropdown-wrap">
                                             <span> {{$pageSize}} <i class="fi-rs-angle-small-down"></i></span>
@@ -54,18 +54,18 @@
                                 <div class="sort-by-cover">
                                     <div class="sort-by-product-wrap">
                                         <div class="sort-by">
-                                            <span><i class="fi-rs-apps-sort"></i>Sort by:</span>
+                                            <span><i class="fi-rs-apps-sort"></i>排序:</span>
                                         </div>
                                         <div class="sort-by-dropdown-wrap">
-                                            <span> Default Sorting <i class="fi-rs-angle-small-down"></i></span>
+                                            <span> 排序方法 <i class="fi-rs-angle-small-down"></i></span>
                                         </div>
                                     </div>
                                     <div class="sort-by-dropdown">
                                         <ul>
-                                            <li><a class="{{ $orderBy=='Default Sorting' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Default Sorting')">Default Sorting</a></li>
-                                            <li><a class="{{ $orderBy=='Price: Low to High' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Price: Low to High')">Price: Low to High</a></li>
-                                            <li><a class="{{ $orderBy=='Price: High to Low' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Price: High to Low')">Price: High to Low</a></li>
-                                            <li><a class="{{ $orderBy=='Sort By Newness' ? 'active':''}}"  href="#" wire:click.prevent="changeOrderBy('Sort By Newness')">Sort By Newness</a></li>
+                                            <li><a class="{{ $orderBy=='Default Sorting' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Default Sorting')">默認排序</a></li>
+                                            <li><a class="{{ $orderBy=='Price: Low to High' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Price: Low to High')">價格:低~高</a></li>
+                                            <li><a class="{{ $orderBy=='Price: High to Low' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Price: High to Low')">價格:高~低</a></li>
+                                            <li><a class="{{ $orderBy=='Sort By Newness' ? 'active':''}}"  href="#" wire:click.prevent="changeOrderBy('Sort By Newness')">新到舊排序</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                             <div class="col-lg-12 col-mg-6"></div>
                         </div> 
                         <div class="widget-category mb-30">
-                            <h5 class="section-title style-1 mb-30 wow fadeIn animated">Category</h5>
+                            <h5 class="section-title style-1 mb-30 wow fadeIn animated">類別</h5>
                             <ul class="categories">
                                 @foreach($categories as $category)
                                 <li><a href="{{route('product.category',['slug'=>$category->slug])}}">{{$category->name}}</a></li>
@@ -153,7 +153,7 @@
                         <!-- Fillter By Price -->
                         <div class="sidebar-widget price_range range mb-30">
                             <div class="widget-header position-relative mb-20 pb-10">
-                                <h5 class="widget-title mb-10">Fillter by price</h5>
+                                <h5 class="widget-title mb-10">預算</h5>
                                 <div class="bt-1 border-color-1"></div>
                             </div>
                             <div class="price-filter">
@@ -161,7 +161,7 @@
                                     <div id="slider-range"></div>
                                     <div class="price_slider_amount" wire:ignore></div>
                                         <div class="label-input">
-                                            <span>Range:</span> <span class="text-info">${{$min_value}}</span>-<span class="text-info">${{$max_value}}</span>
+                                            <span>範圍:</span> <span class="text-info">${{$min_value}}</span>-<span class="text-info">${{$max_value}}</span>
                                         </div>
                                     </div>
                                 </div>

@@ -12,8 +12,8 @@
         <div class="page-header breadcrumb-wrap">
             <div class="container">
                 <div class="breadcrumb">
-                    <a href="index.html" rel="nofollow">Home</a>
-                    <span></span> Shop
+                    <a href="index.html" rel="nofollow">首頁</a>
+                    <span></span> 商店
                 </div>
             </div>
         </div>
@@ -23,13 +23,13 @@
                     <div class="col-lg-9">
                         <div class="shop-product-fillter">
                             <div class="totall-product">
-                                <p> We found <strong class="text-brand">{{$products->total()}}</strong> items for you form <strong class="text-brand">{{$category_name}}</strong>Category!</p>
+                                <p> 我們找到 <strong class="text-brand">{{$products->total()}}</strong> 樣屬於 <strong class="text-brand">{{$category_name}}</strong>類別的商品</p>
                             </div>
                             <div class="sort-by-product-area">
                                 <div class="sort-by-cover mr-10">
                                     <div class="sort-by-product-wrap">
                                         <div class="sort-by">
-                                            <span><i class="fi-rs-apps"></i>Show:</span>
+                                            <span><i class="fi-rs-apps"></i>顯示:</span>
                                         </div>
                                         <div class="sort-by-dropdown-wrap">
                                             <span> {{$pageSize}} <i class="fi-rs-angle-small-down"></i></span>
@@ -47,18 +47,18 @@
                                 <div class="sort-by-cover">
                                     <div class="sort-by-product-wrap">
                                         <div class="sort-by">
-                                            <span><i class="fi-rs-apps-sort"></i>Sort by:</span>
+                                            <span><i class="fi-rs-apps-sort"></i>排序:</span>
                                         </div>
                                         <div class="sort-by-dropdown-wrap">
-                                            <span> Default Sorting <i class="fi-rs-angle-small-down"></i></span>
+                                            <span> 排序方法 <i class="fi-rs-angle-small-down"></i></span>
                                         </div>
                                     </div>
                                     <div class="sort-by-dropdown">
                                         <ul>
-                                            <li><a class="{{ $orderBy=='Default Sorting' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Default Sorting')">Default Sorting</a></li>
-                                            <li><a class="{{ $orderBy=='Price: Low to High' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Price: Low to High')">Price: Low to High</a></li>
-                                            <li><a class="{{ $orderBy=='Price: High to Low' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Price: High to Low')">Price: High to Low</a></li>
-                                            <li><a class="{{ $orderBy=='Sort By Newness' ? 'active':''}}"  href="#" wire:click.prevent="changeOrderBy('Sort By Newness')">Sort By Newness</a></li>
+                                            <li><a class="{{ $orderBy=='Default Sorting' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Default Sorting')">默認排序</a></li>
+                                            <li><a class="{{ $orderBy=='Price: Low to High' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Price: Low to High')">價格:低~高</a></li>
+                                            <li><a class="{{ $orderBy=='Price: High to Low' ? 'active':''}}" href="#" wire:click.prevent="changeOrderBy('Price: High to Low')">價格:高~低</a></li>
+                                            <li><a class="{{ $orderBy=='Sort By Newness' ? 'active':''}}"  href="#" wire:click.prevent="changeOrderBy('Sort By Newness')">新到舊排序</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Surfside Media</title>
+    <title>BABYSHOP</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,23 +27,17 @@
                         <div class="header-info">
                             <ul>
                                 <li>
-                                    <a class="language-dropdown-active" href="#"> <i class="fi-rs-world"></i> English <i class="fi-rs-angle-small-down"></i></a>
-                                    <ul class="language-dropdown">
-                                        <li><a href="#"><img src="{{ asset('assets/imgs/theme/flag-fr.png') }}" alt="">Français</a></li>
-                                        <li><a href="#"><img src="{{ asset('assets/imgs/theme/flag-dt.png') }}" alt="">Deutsch</a></li>
-                                        <li><a href="#"><img src="{{ asset('assets/imgs/theme/flag-ru.png') }}" alt="">Pусский</a></li>
-                                    </ul>
+                                    <a class="language-dropdown-active" href="#"> <i class="fi-rs-world"></i>  <i class="fi-rs-angle-small-down"></i></a>
+                                 
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-4">
+                    <div class="col-xl-6 col-lg-5">
                         <div class="text-center">
                             <div id="news-flash" class="d-inline-block">
                                 <ul>
-                                    <li>Get great devices up to 50% off <a href="shop.html">View details</a></li>
-                                    <li>Supper Value Deals - Save more with coupons</li>
-                                    <li>Trendy 25silver jewelry, save up 35% off today <a href="shop.html">Shop now</a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -96,7 +90,7 @@
                     <div class="header-nav d-none d-lg-flex">
                         <div class="main-categori-wrap d-none d-lg-block">
                             <a class="categori-button-active" href="#">
-                                <span class="fi-rs-apps"></span> Browse Categories
+                                <span class="fi-rs-apps"></span> 瀏覽類別
                             </a>
                             <div class="categori-dropdown-wrap categori-dropdown-active-large">
                                 <ul>
@@ -278,68 +272,10 @@
                         <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block">
                             <nav>
                                 <ul>
-                                    <li><a class="active" href="/">首頁 </a></li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a class="active" href="/">首頁 </a></li>                                    
                                     <li><a href="{{route('shop')}}">Shop</a></li>
-                                    <li class="position-static"><a href="#">Our Collections <i class="fi-rs-angle-down"></i></a>
-                                        <ul class="mega-menu">
-                                            <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Women's Fashion</a>
-                                                <ul>
-                                                    <li><a href="product-details.html">Dresses</a></li>
-                                                    <li><a href="product-details.html">Blouses & Shirts</a></li>
-                                                    <li><a href="product-details.html">Hoodies & Sweatshirts</a></li>
-                                                    <li><a href="product-details.html">Wedding Dresses</a></li>
-                                                    <li><a href="product-details.html">Prom Dresses</a></li>
-                                                    <li><a href="product-details.html">Cosplay Costumes</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Men's Fashion</a>
-                                                <ul>
-                                                    <li><a href="product-details.html">Jackets</a></li>
-                                                    <li><a href="product-details.html">Casual Faux Leather</a></li>
-                                                    <li><a href="product-details.html">Genuine Leather</a></li>
-                                                    <li><a href="product-details.html">Casual Pants</a></li>
-                                                    <li><a href="product-details.html">Sweatpants</a></li>
-                                                    <li><a href="product-details.html">Harem Pants</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Technology</a>
-                                                <ul>
-                                                    <li><a href="product-details.html">Gaming Laptops</a></li>
-                                                    <li><a href="product-details.html">Ultraslim Laptops</a></li>
-                                                    <li><a href="product-details.html">Tablets</a></li>
-                                                    <li><a href="product-details.html">Laptop Accessories</a></li>
-                                                    <li><a href="product-details.html">Tablet Accessories</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="sub-mega-menu sub-mega-menu-width-34">
-                                                <div class="menu-banner-wrap">
-                                                    <a href="product-details.html"><img src="{{ asset('assets/imgs/banner/menu-banner.jpg') }}" alt="Surfside Media"></a>
-                                                    <div class="menu-banner-content">
-                                                        <h4>Hot deals</h4>
-                                                        <h3>Don't miss<br> Trending</h3>
-                                                        <div class="menu-banner-price">
-                                                            <span class="new-price text-success">Save to 50%</span>
-                                                        </div>
-                                                        <div class="menu-banner-btn">
-                                                            <a href="product-details.html">Shop now</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="menu-banner-discount">
-                                                        <h3>
-                                                            <span>35%</span>
-                                                            off
-                                                        </h3>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="blog.html">Blog </a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    
+                                    
                                     @auth
                                         <li><a href="#">我的帳戶<i class="fi-rs-angle-down"></i></a>
                                             @if(Auth::user()->utype == 'ADM')
@@ -363,7 +299,7 @@
                         </div>
                     </div>
                     <div class="hotline d-none d-lg-block">
-                        <p><i class="fi-rs-smartphone"></i><span>Toll Free</span> (+1) 0000-000-000 </p>
+                        <p><i class="fi-rs-smartphone"></i>0000-000-000 </p>
                     </div>
                     <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>
                     <div class="header-action-right d-block d-lg-none">

@@ -24,11 +24,11 @@
         </ul>
         <div class="shopping-cart-footer">
             <div class="shopping-cart-total">
-                <h4>Total <span>${{Cart::instance('cart')->total()}}</span></h4>
+               <h4>總額 <span>${{Cart::instance('cart')->total()}}</span></h4>
             </div>
             <div class="shopping-cart-button">
-                <a href="{{route('shop.cart')}}" class="outline">View cart</a>
-                <a href="checkout.html">Checkout</a>
+                <a href="{{route('shop.cart')}}" class="outline">進入購物車</a>
+                <a href="checkout.html">結帳</a>
             </div>
         </div>
     </div>
