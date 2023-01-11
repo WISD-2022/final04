@@ -150,6 +150,31 @@
                                 @endforeach
                             </ul>
                         </div>
+						
+						
+						<!-- Fillter By Price -->
+                        <div class="sidebar-widget price_range range mb-30">
+                            <div class="widget-header position-relative mb-20 pb-10">
+                                <h5 class="widget-title mb-10">預算</h5>
+                                <div class="bt-1 border-color-1"></div>
+                            </div>
+                            <div class="price-filter">
+                                <div class="price-filter-inner">
+                                    <div id="slider-range"></div>
+                                    <div class="price_slider_amount" wire:ignore></div>
+                                        <div class="label-input">
+                                            <span>範圍:</span> <span class="text-info">${{$min_value}}</span>-<span class="text-info">${{$max_value}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <a href="shop.html" class="btn btn-sm btn-default"><i class="fi-rs-filter mr-5"></i> Fillter</a>
+                        </div>
+						
+						
+						
                     </div>
                 </div>
             </div>
