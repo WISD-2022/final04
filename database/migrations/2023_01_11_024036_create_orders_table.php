@@ -20,7 +20,9 @@ return new class extends Migration
             $table->decimal('tex');
             $table->decimal('total');
             $table->string('name');
+            $table->string('mobile');
             $table->string('email');
+            $table->string('line1');
             $table->enum('status', ['ordered', 'delivered', 'canceled'])->default('ordered');
             $table->boolean('is_shopping_different')->default(false);
             $table->timestamps();

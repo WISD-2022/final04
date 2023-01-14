@@ -107,7 +107,7 @@
                                         </table>
                                     </div>
                                     @auth
-                                        <a href="{{route('shop.checkout')}}"  class="btn "> <i class="fi-rs-box-alt mr-10"></i> 確認</a>
+                                        <a href="#"  class="btn " wire:click.prevent="checkout"> <i class="fi-rs-box-alt mr-10"></i> 確認</a>
                                     @else
                                         <a href="{{route('login')}}"  class="btn "> <i class="fi-rs-box-alt mr-10"></i> 確認</a>
                                     @endif

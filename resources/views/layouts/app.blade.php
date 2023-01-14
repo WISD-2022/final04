@@ -94,7 +94,7 @@
                                                     <li><a href="{{route('admin.products')}}">產品管理</a></li>
                                                     <li><a href="{{route('admin.categories')}}">產品類別</a></li>
                                                     <li><a href="{{route('admin.home.slider')}}">首頁Banner</a></li>
-                                                    <li><a href="#">訂單</a></li>
+                                                    <li><a href="{{route('admin.orders')}}">訂單</a></li>
                                                     <li><a href="{{route('admin.customer')}}">顧客</a></li>
                                                 </ul>
                                             @else

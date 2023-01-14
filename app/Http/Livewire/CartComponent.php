@@ -40,14 +40,17 @@ class CartComponent extends Component
 
     public function checkout(){
         if(Auth::check()){
-            return redirect()->route('checkout');
+            return redirect()->route('shop.checkout');
         }else{
             return redirect()->route('login');
         }
     }
 
     public function setAmountForCheckout(){
-
+        if(!Cart::instance('cart')->count() > 0){
+            session()->forget('checkout');
+            return;
+        }
         if(session()->has('coupon')){
             session()->put('checkout',[
                 'subtotal' => $this->subtotalAfterDiscount,
