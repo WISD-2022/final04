@@ -61,7 +61,7 @@
                                                 <td>{{$order->email}}</td>
                                                 <td>{{$order->status}}</td>
                                                 <td>{{$order->created_at}}</td>
-                                                <td><a href="{{route('admin.orderdetails',['order_id'=>$order->id])}}" class="btn btn-info btn-sm">訂單詳情</a></td>
+                                                <td><a href="{{route('user.orderdetails',['order_id'=>$order->id])}}" class="btn btn-info btn-sm">訂單詳情</a></td>
                                             </tr>
                                         @endforeach
                                     </tbody>
