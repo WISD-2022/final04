@@ -94,12 +94,12 @@
                                                     <li><a href="{{route('admin.products')}}">產品管理</a></li>
                                                     <li><a href="{{route('admin.categories')}}">產品類別</a></li>
                                                     <li><a href="{{route('admin.home.slider')}}">首頁Banner</a></li>
-                                                    <li><a href="{{route('admin.orders')}}">訂單</a></li>
+                                                    <li><a href="{{route('admin.orders')}}">訂單管理</a></li>
                                                     <li><a href="{{route('admin.customer')}}">顧客</a></li>
                                                 </ul>
                                             @else
                                                 <ul class="sub-menu">
-                                                    <li><a href="{{route('user.dashboard')}}">訂單</a></li>
+                                                    <li><a href="{{route('user.orders')}}">我的訂單</a></li>
                                                 </ul>
                                             @endif
                                         </li>

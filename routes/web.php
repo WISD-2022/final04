@@ -11,6 +11,8 @@ use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\WishlistIconComponent;
 use App\Http\Livewire\WishlistComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\User\UserOrdersComponent;
+use App\Http\Livewire\User\UserOrderDetailsComponent;
 use App\Http\Livewire\Admin\AdminCustomerComponent;
 use App\Http\Livewire\Admin\AdminCategoriesComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
@@ -66,6 +68,8 @@ Route::get('/thank-you',ThankyouComponent::class)->name('thankyou');
 // 使用者介面
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/orders', UserOrdersComponent::class)->name('user.orders');
+    Route::get('/user/orders/{order_id}', UserOrderDetailsComponent::class)->name('user.orderdetails');
 });
 
 // 管理員介面
