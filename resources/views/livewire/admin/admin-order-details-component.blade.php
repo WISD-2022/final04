@@ -30,7 +30,10 @@
                             <div class="card-header">
                                 <div class="row">
                                     <div class="col-md-6" style="display: flex;align-items: center;">
-                                        訂購商品
+                                        訂單詳情
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="{{ route('admin.orders') }}" class="btn btn-success float-end">所有訂單</a>
                                     </div>
                                 </div>
                             </div>
@@ -181,7 +184,7 @@
                             <div class="card-header">
                                 <div class="row">
                                     <div class="col-md-6" style="display: flex;align-items: center;">
-                                    交易方式
+                                        交易方式
                                     </div>
                                 </div>
                             </div>
