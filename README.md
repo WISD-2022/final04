@@ -52,6 +52,7 @@
 <a href ="https://imgur.com/2RZ9hnL"><img src="https://imgur.com/2RZ9hnL.png" title="source: imgur.com" /></a>
 
 ## -管理人員
+
 ### ◆首頁
 <a href ="https://imgur.com/eZYeHa9"><img src="https://imgur.com/eZYeHa9.png" title="source: imgur.com" /></a>
 ### ◆產品管理
@@ -82,7 +83,7 @@
 a href ="https://imgur.com/MjLppqU"><img src="https://imgur.com/MjLppqU.png" title="source: imgur.com" /></a>
 
 
-#關聯式綱要圖
+# 關聯式綱要圖
 
 a href ="https://imgur.com/raEFNzh"><img src="https://imgur.com/raEFNzh.png" title="source: imgur.com" /></a>
 
@@ -90,34 +91,34 @@ a href ="https://imgur.com/raEFNzh"><img src="https://imgur.com/raEFNzh.png" tit
 
 # 資料表
 
-##使用者(users)資料表
+使用者(users)資料表
 a href ="https://imgur.com/kvuwzeQ"><img src="https://imgur.com/kvuwzeQ.png" title="source: imgur.com" /></a>
 
-##產品(products)資料表
+產品(products)資料表
 a href ="https://imgur.com/KPR5f0U"><img src="https://imgur.com/KPR5f0U.png" title="source: imgur.com" /></a>
 
-##類別(categories)資料表
+類別(categories)資料表
 a href ="https://imgur.com/aFc1xgZ"><img src="https://imgur.com/aFc1xgZ.png" title="source: imgur.com" /></a>
 
-##訂單(orders)資料表
+訂單(orders)資料表
 a href ="https://imgur.com/cqv5tgX"><img src="https://imgur.com/cqv5tgX.png" title="source: imgur.com" /></a>
 
-##訂單明細(order_items)資料表
+訂單明細(order_items)資料表
 a href ="https://imgur.com/Rp0Lx3V"><img src="https://imgur.com/Rp0Lx3V.png" title="source: imgur.com" /></a>
 
-##主頁滑塊(home_sliders)資料表
+主頁滑塊(home_sliders)資料表
 a href ="https://imgur.com/f5uyemW"><img src="https://imgur.com/f5uyemW.png" title="source: imgur.com" /></a>
 
 
-#初始專案與DB負責的同學
+# 初始專案與DB負責的同學
 
 初始專案 3A932010 賴世傑
 DB 3A932010 賴世傑 、 3A932118 謝侑庭
   
-#系統測試資料存放位置
+# 系統測試資料存放位置
  final04底下的sql資料夾
  
-#系統使用者測試帳號
+# 系統使用者測試帳號
 ★ 前台
      帳號：user@test.com
      密碼：user1234
@@ -126,15 +127,15 @@ DB 3A932010 賴世傑 、 3A932118 謝侑庭
      帳號：admin@test.com
      密碼：admin1234
 	 
-#系統開發人員與工作分配
+# 系統開發人員與工作分配
   
-##3A932010  賴世傑
+## 3A932010  賴世傑
   訪客/會員端製作
   DB 
   readme 撰寫
   期中報告製作
   
-##3A932118
+## 3A932118
   管理者端製作
   初始專案
   DB
