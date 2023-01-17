@@ -83,8 +83,6 @@
 
 ## -訪客/會員
   - 首頁 Route::get('/', HomeComponent::class)->name('home.index');  [3A932010 賴世傑](https://github.com/3A932010)
-  
-  
   - 商品瀏覽頁面 Route::get('/shop', ShopComponent::class)->name('shop'); [3A932010 賴世傑](https://github.com/3A932010)
   - 個別商品資訊 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');[3A932010 賴世傑](https://github.com/3A932010)
   - 購物車 Route::get('/cart', CartComponent::class)->name('shop.cart'); [3A932010 賴世傑](https://github.com/3A932010)
@@ -114,7 +112,7 @@
  - 顯示個別訂單   Route::get('/admin/orders/{order_id}', AdminOrderDetailsComponent::class)->name('admin.orderdetails');[3A932118 謝侑庭](https://github.com/3A932118)
   
 # ERD
-<a href ="https://imgur.com/MjLppqU"><img src="https://imgur.com/MjLppqU.png" title="source: imgur.com" /></a>
+<a href ="https://imgur.com/J3ubeQ1"><img src="https://imgur.com/J3ubeQ1.png" title="source: imgur.com" /></a>
 
 
 # 關聯式綱要圖
@@ -149,8 +147,12 @@
 - 初始專案 3A932118 謝侑庭
 - DB 3A932010 賴世傑 、 3A932118 謝侑庭
   
+# 額外使用的套件或樣板
+ - 模板使用 https://github.com/surfsidemedia/Laravel-9-E-Commerce/ (很好的電商平臺模板) 
+ - livewire 套件  $ composer require livewire/livewire (Livewire 是 Laravel 的全端框架，能建立像 Vue 一樣的動態頁面的同時又能保有 Laravel 原有的特性。除此之外在 SEO 方面仍跟原本 Laravel 的 blade 一樣可以渲染出畫面上的資料，不用擔心是否要再部署 SSR 的問題。)
+  
 # 系統測試資料存放位置
- final04底下的sql資料夾
+ final04底下的db資料夾
  
 # 系統使用者測試帳號
 ★ 前台
