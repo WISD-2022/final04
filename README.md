@@ -43,13 +43,20 @@
 ### ◆熱門類別&新品上架
 <a href ="https://imgur.com/lrXhrFE"><img src="https://imgur.com/lrXhrFE.png" title="source: imgur.com" /></a>
 ### ◆商品頁面
-<a href ="https://imgur.com/Lp5bbBI"><img src="https://imgur.com/Lp5bbBI.png" title="source: imgur.com" /></a>
+<a href ="https://imgur.com/z02DZtI"><img src="https://imgur.com/z02DZtI.png" title="source: imgur.com" /></a>
 ### ◆商品內頁
 <a href ="https://imgur.com/OkrqJVU"><img src="https://imgur.com/OkrqJVU.png" title="source: imgur.com" /></a>
 ### ◆產品搜尋頁面
 <a href ="https://imgur.com/4GMivov"><img src="https://imgur.com/4GMivov.png" title="source: imgur.com" /></a>
 ### ◆購物車頁面
 <a href ="https://imgur.com/2RZ9hnL"><img src="https://imgur.com/2RZ9hnL.png" title="source: imgur.com" /></a>
+### ◆結帳頁面
+<a href ="https://imgur.com/KGRmRyi"><img src="https://imgur.com/KGRmRyi.png" title="source: imgur.com" /></a>
+### ◆我的訂單頁面
+<a href ="https://imgur.com/OIDIxrh"><img src="https://imgur.com/OIDIxrh.png" title="source: imgur.com" /></a>
+### ◆感謝訂購頁面
+<a href ="https://imgur.com/jJIU3PI"><img src="https://imgur.com/jJIU3PI.png" title="source: imgur.com" /></a>
+
 
 ## -管理人員
 
@@ -63,51 +70,78 @@
 <a href ="https://imgur.com/MjLppqU"><img src="https://imgur.com/MjLppqU.png" title="source: imgur.com" /></a>
 ### ◆顧客管理
 <a href ="https://imgur.com/PMldpJH"><img src="https://imgur.com/PMldpJH.png" title="source: imgur.com" /></a>
+### ◆訂單管理
+<a href ="https://imgur.com/fTajCWI"><img src="https://imgur.com/fTajCWI.png" title="source: imgur.com" /></a>
+  
 
-   
+# 系統名稱及作用
+
+- 嬰幼兒店商平台系統
+- 提供網購族群全方位嬰幼兒產品的購物網路平台，為忙碌的現代父母提供最便利的購物方式，滿足家長在需要嬰幼兒產品時，隨時隨地都能下單訂購的需求，改變家長的生活，減少額外購物時間，增加親子時光。 
+  
 # 系統主要功能
 
 ## -訪客/會員
   - 首頁 Route::get('/', HomeComponent::class)->name('home.index');  [3A932010 賴世傑](https://github.com/3A932010)
+  
+  
   - 商品瀏覽頁面 Route::get('/shop', ShopComponent::class)->name('shop'); [3A932010 賴世傑](https://github.com/3A932010)
   - 個別商品資訊 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');[3A932010 賴世傑](https://github.com/3A932010)
   - 購物車 Route::get('/cart', CartComponent::class)->name('shop.cart'); [3A932010 賴世傑](https://github.com/3A932010)
   - 願望清單 Route::get('/wishlist', WishlistComponent::class)->name('shop.wishlist'); [3A932010 賴世傑](https://github.com/3A932010)
   - 搜尋產品 Route::get('/search',SearchComponent::class)->name('product.search'); [3A932010 賴世傑](https://github.com/3A932010)
   - 產品類別 Route::get('/product-category/{slug}',CategoryComponent::class)->name('product.category'); [3A932010 賴世傑](https://github.com/3A932010)
-  
-  
-  
+  - 結帳 Route::get('/checkout', CheckoutComponent::class)->name('shop.checkout');[3A932010 賴世傑](https://github.com/3A932010)
+  - 感謝訂購 Route::get('/thank-you',ThankyouComponent::class)->name('thankyou');[3A932118 謝侑庭](https://github.com/3A932118)
+  - 我的訂單 Route::middleware(['auth'])->group(function () {
+    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/orders', UserOrdersComponent::class)->name('user.orders');
+    Route::get('/user/orders/{order_id}', UserOrderDetailsComponent::class)->name('user.orderdetails');
+});[3A932118 謝侑庭](https://github.com/3A932118)
+
+## -管理者 
+ - 會員管理	  Route::get('/admin/customer', AdminCustomerComponent::class)->name('admin.customer');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 顯示所有類別   Route::get('/admin/categories', AdminCategoriesComponent::class)->name('admin.categories');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 新增類別   Route::get('/admin/category/add', AdminAddCategoryComponent::class)->name('admin.category.add');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 編輯類別   Route::get('/admin/category/edit/{category_id}', AdminEditCategoryComponent::class)->name('admin.category.edit');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 顯示所有產品   Route::get('/admin/products', AdminProductComponent::class)->name('admin.products');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 新增產品   Route::get('/admin/product/add', AdminAddProductComponent::class)->name('admin.product.add');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 編輯產品   Route::get('/admin/product/edit/{product_id}', AdminEditProductComponent::class)->name('admin.product.edit');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 首頁Banner管理   Route::get('/admin/slider', AdminHomeSliderComponent::class)->name('admin.home.slider');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 首頁Banner新增   Route::get('/admin/slider/add', AdminAddHomeSlideComponent::class)->name('admin.home.slide.add');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 首頁Banner編輯   Route::get('/admin/slider/edit/{slide_id}', AdminEditHomeSlideComponent::class)->name('admin.home.slide.edit');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 顯示所有訂單   Route::get('/admin/orders', AdminOrderComponent::class)->name('admin.orders');[3A932118 謝侑庭](https://github.com/3A932118)
+ - 顯示個別訂單   Route::get('/admin/orders/{order_id}', AdminOrderDetailsComponent::class)->name('admin.orderdetails');[3A932118 謝侑庭](https://github.com/3A932118)
   
 # ERD
-a href ="https://imgur.com/MjLppqU"><img src="https://imgur.com/MjLppqU.png" title="source: imgur.com" /></a>
+<a href ="https://imgur.com/MjLppqU"><img src="https://imgur.com/MjLppqU.png" title="source: imgur.com" /></a>
 
 
 # 關聯式綱要圖
 
-a href ="https://imgur.com/raEFNzh"><img src="https://imgur.com/raEFNzh.png" title="source: imgur.com" /></a>
+<a href ="https://imgur.com/raEFNzh"><img src="https://imgur.com/raEFNzh.png" title="source: imgur.com" /></a>
 
 
 
 # 資料表
 
-使用者(users)資料表
-a href ="https://imgur.com/kvuwzeQ"><img src="https://imgur.com/kvuwzeQ.png" title="source: imgur.com" /></a>
+- 使用者(users)資料表
+<a href ="https://imgur.com/kvuwzeQ"><img src="https://imgur.com/kvuwzeQ.png" title="source: imgur.com" /></a>
 
-產品(products)資料表
-a href ="https://imgur.com/KPR5f0U"><img src="https://imgur.com/KPR5f0U.png" title="source: imgur.com" /></a>
+- 產品(products)資料表
+<a href ="https://imgur.com/KPR5f0U"><img src="https://imgur.com/KPR5f0U.png" title="source: imgur.com" /></a>
 
-類別(categories)資料表
-a href ="https://imgur.com/aFc1xgZ"><img src="https://imgur.com/aFc1xgZ.png" title="source: imgur.com" /></a>
+- 類別(categories)資料表
+<a href ="https://imgur.com/aFc1xgZ"><img src="https://imgur.com/aFc1xgZ.png" title="source: imgur.com" /></a>
 
-訂單(orders)資料表
-a href ="https://imgur.com/cqv5tgX"><img src="https://imgur.com/cqv5tgX.png" title="source: imgur.com" /></a>
+- 訂單(orders)資料表
+<a href ="https://imgur.com/cqv5tgX"><img src="https://imgur.com/cqv5tgX.png" title="source: imgur.com" /></a>
 
-訂單明細(order_items)資料表
-a href ="https://imgur.com/Rp0Lx3V"><img src="https://imgur.com/Rp0Lx3V.png" title="source: imgur.com" /></a>
+- 訂單明細(order_items)資料表
+<a href ="https://imgur.com/Rp0Lx3V"><img src="https://imgur.com/Rp0Lx3V.png" title="source: imgur.com" /></a>
 
-主頁滑塊(home_sliders)資料表
-a href ="https://imgur.com/f5uyemW"><img src="https://imgur.com/f5uyemW.png" title="source: imgur.com" /></a>
+- 主頁滑塊(home_sliders)資料表
+<a href ="https://imgur.com/f5uyemW"><img src="https://imgur.com/f5uyemW.png" title="source: imgur.com" /></a>
 
 
 # 初始專案與DB負責的同學
@@ -129,18 +163,18 @@ a href ="https://imgur.com/f5uyemW"><img src="https://imgur.com/f5uyemW.png" tit
 	 
 # 系統開發人員與工作分配
   
- [3A932010  賴世傑](https://github.com/3A932010)
-  訪客/會員端製作
-  DB 
-  readme 撰寫
-  期中報告製作
+[3A932010  賴世傑](https://github.com/3A932010)
+  - 訪客/會員端製作
+  - DB 
+  - readme 撰寫
+  - 期中報告製作
   
-## 3A932118
-  管理者端製作
-  初始專案
-  DB
-  readme 撰寫
-  期中報告製作
+[3A932118  謝侑庭](https://github.com/3A932118)
+  - 管理者端製作
+  - 初始專案
+  - DB
+  - readme 撰寫
+  - 期中報告製作
  
 
 
