@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2023-01-14 18:03:42
+-- 產生時間： 2023-01-16 04:34:58
 -- 伺服器版本： 10.4.25-MariaDB
 -- PHP 版本： 8.1.10
 
@@ -137,9 +137,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `orders` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
-  `subtotal` decimal(8,2) NOT NULL,
-  `tax` decimal(8,2) NOT NULL,
-  `total` decimal(8,2) NOT NULL,
+  `subtotal` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tax` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `total` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mobile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -157,7 +157,13 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`id`, `user_id`, `subtotal`, `tax`, `total`, `name`, `mobile`, `email`, `line1`, `status`, `is_shipping_different`, `created_at`, `updated_at`) VALUES
 (1, 3, '457.00', '95.97', '552.97', 'Artim', '1234567899', 'a1234@gmail.com', '123', 'ordered', 0, '2023-01-14 14:59:45', '2023-01-14 14:59:45'),
 (2, 3, '457.00', '95.97', '552.97', 'Artim', '1234567899', 'a1234@gmail.com', '123', 'ordered', 0, '2023-01-14 15:00:32', '2023-01-14 15:00:32'),
-(3, 3, '457.00', '95.97', '552.97', 'Artim', '1234567899', 'admin@test.com', '123', 'ordered', 0, '2023-01-14 15:02:45', '2023-01-14 15:02:45');
+(3, 3, '457.00', '95.97', '552.97', 'Artim', '1234567899', 'admin@test.com', '123', 'ordered', 0, '2023-01-14 15:02:45', '2023-01-14 15:02:45'),
+(4, 3, '331.00', '69.51', '400.51', 'Artimccc', '1234567899', 'user@test.com', '123', 'ordered', 0, '2023-01-16 03:16:13', '2023-01-16 03:16:13'),
+(5, 1, '817.00', '171.57', '988.57', 'Artimccc4872', '12345678945', 'user@test.com', '123', 'ordered', 0, '2023-01-16 03:23:46', '2023-01-16 03:23:46'),
+(6, 1, '795.00', '166.95', '961.95', 'Artimccc45896', '12345678945', 'user@test.com', '123sas', 'ordered', 0, '2023-01-16 03:25:50', '2023-01-16 03:25:50'),
+(7, 1, '300.00', '63.00', '363.00', 'Artimccc444', '12345678945', 'user@test.com', 's', 'ordered', 0, '2023-01-16 03:27:25', '2023-01-16 03:27:25'),
+(8, 1, '678.00', '142.38', '820.38', 'Artimccc45896', '12345678945', 'user@test.com', '123sas', 'ordered', 0, '2023-01-16 03:27:55', '2023-01-16 03:27:55'),
+(9, 1, '940.00', '197.40', '1,137.40', 'Artimccc444', '12345678945', 'user@test.com', '123sas', 'ordered', 0, '2023-01-16 03:32:06', '2023-01-16 03:32:06');
 
 -- --------------------------------------------------------
 
@@ -169,7 +175,7 @@ CREATE TABLE `order_items` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `product_id` bigint(20) UNSIGNED NOT NULL,
   `order_id` bigint(20) UNSIGNED NOT NULL,
-  `price` decimal(8,2) NOT NULL,
+  `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `quantity` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -185,7 +191,18 @@ INSERT INTO `order_items` (`id`, `product_id`, `order_id`, `price`, `quantity`, 
 (3, 10, 2, '331.00', 1, '2023-01-14 15:00:32', '2023-01-14 15:00:32'),
 (4, 16, 2, '126.00', 1, '2023-01-14 15:00:32', '2023-01-14 15:00:32'),
 (5, 10, 3, '331.00', 1, '2023-01-14 15:02:45', '2023-01-14 15:02:45'),
-(6, 16, 3, '126.00', 1, '2023-01-14 15:02:45', '2023-01-14 15:02:45');
+(6, 16, 3, '126.00', 1, '2023-01-14 15:02:45', '2023-01-14 15:02:45'),
+(7, 10, 4, '331.00', 1, '2023-01-16 03:16:13', '2023-01-16 03:16:13'),
+(8, 11, 5, '486.00', 1, '2023-01-16 03:23:46', '2023-01-16 03:23:46'),
+(9, 10, 5, '331.00', 1, '2023-01-16 03:23:46', '2023-01-16 03:23:46'),
+(10, 15, 6, '309.00', 1, '2023-01-16 03:25:50', '2023-01-16 03:25:50'),
+(11, 11, 6, '486.00', 1, '2023-01-16 03:25:50', '2023-01-16 03:25:50'),
+(12, 21, 7, '100.00', 3, '2023-01-16 03:27:25', '2023-01-16 03:27:25'),
+(13, 19, 8, '180.00', 1, '2023-01-16 03:27:55', '2023-01-16 03:27:55'),
+(14, 12, 8, '398.00', 1, '2023-01-16 03:27:55', '2023-01-16 03:27:55'),
+(15, 21, 8, '100.00', 1, '2023-01-16 03:27:55', '2023-01-16 03:27:55'),
+(16, 19, 9, '180.00', 3, '2023-01-16 03:32:06', '2023-01-16 03:32:06'),
+(17, 21, 9, '100.00', 4, '2023-01-16 03:32:06', '2023-01-16 03:32:06');
 
 -- --------------------------------------------------------
 
@@ -296,7 +313,13 @@ CREATE TABLE `transactions` (
 
 INSERT INTO `transactions` (`id`, `user_id`, `order_id`, `mode`, `status`, `created_at`, `updated_at`) VALUES
 (1, 3, 2, 'cod', 'pending', '2023-01-14 15:00:32', '2023-01-14 15:00:32'),
-(2, 3, 3, 'cod', 'pending', '2023-01-14 15:02:45', '2023-01-14 15:02:45');
+(2, 3, 3, 'cod', 'pending', '2023-01-14 15:02:45', '2023-01-14 15:02:45'),
+(3, 3, 4, 'cod', 'pending', '2023-01-16 03:16:13', '2023-01-16 03:16:13'),
+(4, 1, 5, 'cod', 'pending', '2023-01-16 03:23:46', '2023-01-16 03:23:46'),
+(5, 1, 6, 'cod', 'pending', '2023-01-16 03:25:50', '2023-01-16 03:25:50'),
+(6, 1, 7, 'cod', 'pending', '2023-01-16 03:27:25', '2023-01-16 03:27:25'),
+(7, 1, 8, 'cod', 'pending', '2023-01-16 03:27:55', '2023-01-16 03:27:55'),
+(8, 1, 9, 'cod', 'pending', '2023-01-16 03:32:06', '2023-01-16 03:32:06');
 
 -- --------------------------------------------------------
 
@@ -448,13 +471,13 @@ ALTER TABLE `migrations`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `personal_access_tokens`
@@ -478,7 +501,7 @@ ALTER TABLE `shippings`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `users`
